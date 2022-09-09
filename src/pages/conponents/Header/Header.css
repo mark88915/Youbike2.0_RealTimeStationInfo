@@ -1,0 +1,12 @@
+#Header {
+    background-color: #fff;
+    padding-left: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#WebSiteTitle {
+    font-weight: lighter;
+    font-size: 25px;
+}

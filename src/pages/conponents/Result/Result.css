@@ -1,0 +1,42 @@
+#ResultField {
+    width: 80%;
+    padding-top: 170px;
+}
+
+.ResultItem {
+    display: flex;
+    justify-content: space-around;
+
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px;
+
+    user-select: none;
+
+    transition: .2s;
+}
+
+.ResultItem:hover {
+    transform: scale(1.1);
+}
+
+.Field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.Road, .Space, .UpdateTime {
+    padding-bottom: 5px;
+}
