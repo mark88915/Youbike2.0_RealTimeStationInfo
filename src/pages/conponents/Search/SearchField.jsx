@@ -6,8 +6,8 @@ const SearchField = ({ station, setStation, stationList, GetChosenRegionStationD
         <div id="SearchField">
             <StationList station={station} setStation={setStation} stationList={stationList} />
 
-            <button id="SearchButton" onClick={GetChosenRegionStationData}></button>
-            <button id="ClearButton" onClick={ClearChosenRegionStationData}></button>
+            <button id="SearchButton" className="FunctionButton" onClick={GetChosenRegionStationData}></button>
+            <button id="ClearButton" className="FunctionButton" onClick={ClearChosenRegionStationData}></button>
         </div>
     )
 }

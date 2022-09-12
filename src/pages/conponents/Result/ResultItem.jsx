@@ -1,6 +1,10 @@
-const ResultItem = ({ stationData }) => {
+const ResultItem = ({ stationData, number }) => {
     return (
         <div className="ResultItem">
+            <div className={"NumberField Field"}>
+                <label className={"Title FieldComponent"}>{number + 1}</label>
+            </div>
+
             <div className={"RoadField Field"}>
                 <label className={"Title FieldComponent"}>地址</label>
                 <div className={"Road FieldComponent"}>{stationData["road"]}</div>

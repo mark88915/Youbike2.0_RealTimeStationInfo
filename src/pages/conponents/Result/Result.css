@@ -1,5 +1,5 @@
 #ResultField {
-    width: 80%;
+    width: 70%;
     padding-top: 170px;
 }
 
@@ -29,6 +29,12 @@
     width: 30%;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.NumberField {
+    align-self: center;
+
+    width: 10%;
 }
 
 .Title {
