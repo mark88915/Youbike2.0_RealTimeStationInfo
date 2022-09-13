@@ -15,10 +15,18 @@
     user-select: none;
 
     transition: .2s;
+
+    animation-name: FadeInWithFallDown;
+    animation-duration: 1s;
 }
 
 .ResultItem:hover {
     transform: scale(1.1);
+}
+
+@keyframes FadeInWithFallDown {
+    0% {opacity: 0; transform: translateY(-50%);}
+    100% {opacity: 1; transform: translateY(0%);}
 }
 
 .Field {
