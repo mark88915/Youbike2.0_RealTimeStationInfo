@@ -4,17 +4,19 @@ import Header from './conponents/Header/Header';
 import SearchField from './conponents/Search/SearchField';
 import ResultField from './conponents/Result/ResultField';
 import './index.css'
+import { useRef } from 'react';
 
 const Index = () => {
     // 台北市政府開放資料平台 Youbike2.0資料api
     const apiUrl = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
 
-    // 站名State
-    const [station, setStation] = useState("大安區");
+    // 當前Select-Box顯示區域
+    const stationRef = useRef("大安區");
 
-    // 站名清單State
+    // 台北各區域List，放入Select-Box作為option的依據
     const [stationList, setStationList] = useState([]);
 
+    // 選中區域之站點資訊List，作為下方顯示資料的依據
     const [chosenRegionStationList, setChosenRegionStationList] = useState([]);
 
     // Get Station Name List After First Render
@@ -52,7 +54,7 @@ const Index = () => {
 
         request.then(function (response) {
             var data = response.data;
-            var result = data.filter(content => content["sarea"] === station);
+            var result = data.filter(content => content["sarea"] === stationRef.current.value);
             var tempList = result.map(function (content) {
                 return {
                     road: content["ar"],
@@ -74,7 +76,7 @@ const Index = () => {
     return (
         <div id="Container">
             <Header />
-            <SearchField station={station} setStation={setStation} stationList={stationList} GetChosenRegionStationData={GetChosenRegionStationData} ClearChosenRegionStationData={ClearChosenRegionStationData} />
+            <SearchField stationRef={stationRef} stationList={stationList} GetChosenRegionStationData={GetChosenRegionStationData} ClearChosenRegionStationData={ClearChosenRegionStationData} />
 
             <ResultField chosenRegionStationList={chosenRegionStationList} />
         </div>
