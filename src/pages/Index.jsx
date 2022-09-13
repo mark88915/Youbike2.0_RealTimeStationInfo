@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Header from './conponents/Header/Header';
 import SearchField from './conponents/Search/SearchField';
 import ResultField from './conponents/Result/ResultField';
+import UIBlock from './conponents/UI_Block/UIBlock';
 import './index.css'
-import { useRef } from 'react';
 
 const Index = () => {
     // 台北市政府開放資料平台 Youbike2.0資料api
@@ -18,6 +18,9 @@ const Index = () => {
 
     // 選中區域之站點資訊List，作為下方顯示資料的依據
     const [chosenRegionStationList, setChosenRegionStationList] = useState([]);
+
+    // 
+    const [isDataLoading, SetIsDataLoading] = useState(true);
 
     // Get Station Name List After First Render
     useEffect(() => {
@@ -37,6 +40,7 @@ const Index = () => {
                 })
 
                 setStationList(tempList);
+                SetIsDataLoading(false);
             })
         }
 
@@ -45,6 +49,7 @@ const Index = () => {
 
     // Axios Get Data
     function GetAllYoubikeStationData() {
+        SetIsDataLoading(true);
         return axios.get(apiUrl);
     }
 
@@ -66,6 +71,7 @@ const Index = () => {
             })
 
             setChosenRegionStationList(tempList);
+            SetIsDataLoading(false);
         });
     }
 
@@ -79,6 +85,7 @@ const Index = () => {
             <SearchField stationRef={stationRef} stationList={stationList} GetChosenRegionStationData={GetChosenRegionStationData} ClearChosenRegionStationData={ClearChosenRegionStationData} />
 
             <ResultField chosenRegionStationList={chosenRegionStationList} />
+            <UIBlock isDataLoading={isDataLoading} />
         </div>
     )
 }
