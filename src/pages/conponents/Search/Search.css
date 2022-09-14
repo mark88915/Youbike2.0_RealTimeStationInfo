@@ -14,12 +14,41 @@
     position: fixed;
 }
 
+@media screen and (max-width: 300px) {
+    #SearchField {
+        padding-top: 80px;
+    }
+}
+
 #StationList {
     width: 300px;
     font-size: 20px;
     padding: 10px;
     border: 0px;
     border-radius: 0%;
+}
+
+@media screen and (max-width: 500px) {
+    #StationList {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #StationList {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #ListLabel {
+        font-size: 16px;
+    }
+
+    #StationList {
+        width: 180px;
+        font-size: 16px;
+    }
 }
 
 .FunctionButton {
@@ -32,6 +61,22 @@
 
     width: 30px;
     height: 30px;
+}
+
+@media screen and (max-width: 350px) {
+    #ListLabel {
+        font-size: 12px;
+    }
+
+    #StationList {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .FunctionButton {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 #SearchButton {

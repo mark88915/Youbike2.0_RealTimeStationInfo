@@ -55,6 +55,7 @@ const Index = () => {
 
     // Get Chosen Station Data
     function GetChosenRegionStationData() {
+        ClearChosenRegionStationData();
         var request = GetAllYoubikeStationData();
 
         request.then(function (response) {

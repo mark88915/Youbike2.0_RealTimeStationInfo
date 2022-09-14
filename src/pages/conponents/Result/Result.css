@@ -25,6 +25,18 @@
     animation-duration: 1s;
 }
 
+@media screen and (max-width: 1300px) {
+    .ResultItem {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .ResultItem {
+        width: 90%;
+    }
+}
+
 .ResultItem:hover {
     transform: scale(1.1);
 }
@@ -47,13 +59,80 @@
 .NumberField {
     align-self: center;
 
-    width: 10%;
+    width: 5%;
+}
+
+.SpaceField {
+    width:20%;
+}
+
+@media screen and (max-width: 1000px) {
+    #ResultField {
+        display: -webkit-inline-box;
+        overflow-x: scroll;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #ResultField::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ResultItem {
+        flex-direction: column;
+        align-items: center;
+
+        width: 40%;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .Field {
+        width: 100%;
+    }
 }
 
 .Title {
     font-size: 20px;
     font-weight: bold;
     padding: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    .ResultItem {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ResultItem {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .ResultItem {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .ResultItem {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .ResultItem {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .Title {
+        font-size: 16px;
+    }
 }
 
 .Road, .Space, .UpdateTime {
