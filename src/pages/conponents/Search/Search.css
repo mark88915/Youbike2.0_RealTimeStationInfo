@@ -29,6 +29,10 @@
 }
 
 @media screen and (max-width: 500px) {
+    #ListLabel {
+        display: none;
+    }
+
     #StationList {
         width: 250px;
     }
@@ -41,13 +45,8 @@
 }
 
 @media screen and (max-width: 400px) {
-    #ListLabel {
-        font-size: 16px;
-    }
-
     #StationList {
         width: 180px;
-        font-size: 16px;
     }
 }
 
@@ -64,18 +63,8 @@
 }
 
 @media screen and (max-width: 350px) {
-    #ListLabel {
-        font-size: 12px;
-    }
-
     #StationList {
         width: 150px;
-        font-size: 12px;
-    }
-
-    .FunctionButton {
-        width: 20px;
-        height: 20px;
     }
 }
 
