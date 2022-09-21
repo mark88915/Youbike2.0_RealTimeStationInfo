@@ -10,7 +10,7 @@ const Index = () => {
     // 台北市政府開放資料平台 Youbike2.0資料api
     const apiUrl = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
 
-    // 當前Select-Box顯示區域
+    // 當前Select-Box選項
     const stationRef = useRef("大安區");
 
     // 台北各區域List，放入Select-Box作為option的依據
@@ -19,7 +19,7 @@ const Index = () => {
     // 選中區域之站點資訊List，作為下方顯示資料的依據
     const [chosenRegionStationList, setChosenRegionStationList] = useState([]);
 
-    // 
+    // UI Block
     const [isDataLoading, SetIsDataLoading] = useState(true);
 
     // Get Station Name List After First Render

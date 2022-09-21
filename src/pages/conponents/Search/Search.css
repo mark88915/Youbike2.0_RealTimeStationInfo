@@ -26,6 +26,10 @@
     padding: 10px;
     border: 0px;
     border-radius: 0%;
+
+    /* 處理Safari的預設style */
+    -webkit-appearance: none; 
+    background-color: #fff;
 }
 
 @media screen and (max-width: 500px) {
@@ -55,11 +59,16 @@
     font-size: 20px;
 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-color: #fff;
+    background-position: center;
 
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 35px;
+
+    /* 處理Safari的預設style */
+    -webkit-appearance: none; 
+    border: 2px black solid;
 }
 
 @media screen and (max-width: 350px) {
@@ -76,13 +85,14 @@
     background-image: url("./eraser.png");
 }
 
-#SearchButton:active, #ClearButton:active {
+.FunctionButton:active {
     background-color: rgb(202, 202, 202);
     box-shadow: 3px 3px;
 }
 
-#SearchButton:hover, #ClearButton:hover{
-    /* 搖晃按鈕ㄟ嘿 */
+.FunctionButton:hover{
+    box-shadow: 3px 3px;
+
     animation-name: ShakeItem;
     animation-duration: .5s;
     animation-iteration-count: infinite;
