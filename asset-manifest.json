@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Youbike2.0_RealTimeStationInfo/static/css/main.ee367d51.css",
-    "main.js": "/Youbike2.0_RealTimeStationInfo/static/js/main.bcb23dda.js",
+    "main.js": "/Youbike2.0_RealTimeStationInfo/static/js/main.562f1030.js",
     "index.html": "/Youbike2.0_RealTimeStationInfo/index.html",
     "main.ee367d51.css.map": "/Youbike2.0_RealTimeStationInfo/static/css/main.ee367d51.css.map",
-    "main.bcb23dda.js.map": "/Youbike2.0_RealTimeStationInfo/static/js/main.bcb23dda.js.map"
+    "main.562f1030.js.map": "/Youbike2.0_RealTimeStationInfo/static/js/main.562f1030.js.map"
   },
   "entrypoints": [
     "static/css/main.ee367d51.css",
-    "static/js/main.bcb23dda.js"
+    "static/js/main.562f1030.js"
   ]
 }
