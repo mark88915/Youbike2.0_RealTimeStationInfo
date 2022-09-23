@@ -78,7 +78,8 @@
 
 @media screen and (max-width: 1000px) {
     #ResultField {
-        display: -webkit-inline-box;
+        display: flex;
+        flex-wrap: wrap;
         height: 100%;
 
         overflow-x: scroll;
@@ -91,7 +92,8 @@
         width: 40%;
         height: 70%;
         margin-top: 30px;
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .Field {
@@ -143,4 +145,39 @@
 
 .Road, .Space, .UpdateTime {
     padding-bottom: 5px;
+}
+
+#PaginationButtonGroup {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    background-color: rgb(243, 255, 77);
+}
+
+.PaginationButton {
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 50px;
+
+    /* 處理Safari的預設style */
+    -webkit-appearance: none; 
+    border: 2px black solid;
+}
+
+.PaginationButton:hover {
+    box-shadow: 3px 3px;
+
+    animation-name: ShakeItem;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.PaginationButton:active {
+    background-color: rgb(202, 202, 202);
+    box-shadow: 3px 3px;
 }
