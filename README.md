@@ -1,5 +1,7 @@
 # 台北市Youbike2.0站點即時資訊
 
+### [網站連結](https://mark88915.github.io/Youbike2.0_RealTimeStationInfo/)
+
 ## 製作動機
 1. 過去在實作前後端溝通時都是透過jQuery的ajax，最近有朋友推薦使用axios，跟fetch蠻像的又剛好沒學過fetch就來摸摸看。
 2. 實作Call API只有在實習期間的工作以及先前的C#作品中，還沒有在前端作品中實作過。
