@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# 台北市Youbike2.0站點即時資訊
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 製作動機
+1. 過去在實作前後端溝通時都是透過jQuery的ajax，最近有朋友推薦使用axios，跟fetch蠻像的又剛好沒學過fetch就來摸摸看。
+2. 實作Call API只有在實習期間的工作以及先前的C#作品中，還沒有在前端作品中實作過。
+3. 繼續練習CSS Flex切版、RWD以及學習基礎CSS動畫(Keyframe animation)。
+4. 實作Pagination、UI Block。
 
-## Available Scripts
+## 使用到的工具
+* React.js以及CSS
+* axios
+* 台北市政府開放資料平台
+* Visual Studio Code
 
-In the project directory, you can run:
+## 使用說明
 
-### `npm start`
+### 初始畫面
+**電腦版初始畫面**
+![電腦版畫面](https://i.imgur.com/jaEm4xY.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**手機板初始畫面**
+![手機版畫面](https://i.imgur.com/c91ROHE.jpg)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+### 區域清單
+**電腦版區域清單**
+![電腦版區域清單](https://i.imgur.com/IS2rlxR.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**手機版區域清單**
+![手機版區域清單](https://i.imgur.com/osNHn1u.jpg)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 查尋結果
+**電腦版查詢結果**
+![電腦版查詢結果](https://i.imgur.com/dYnINht.png)
+*電腦版查詢結果為直向擺放*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**手機版查詢結果**
+![手機版查詢結果](https://i.imgur.com/vZ5Ob6W.jpg)
+*手機版查詢結果為橫向擺放*
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ***※各地區查詢結果資料筆數若大於10筆就會進行資料分頁***
