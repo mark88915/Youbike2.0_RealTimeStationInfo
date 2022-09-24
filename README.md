@@ -13,6 +13,7 @@
 * axios
 * 台北市政府開放資料平台
 * Visual Studio Code
+* 部屬至Github Pages
 
 ## 使用說明
 
@@ -45,3 +46,5 @@
 *手機版查詢結果為橫向擺放*
 
 ### ***※各地區查詢結果資料筆數若大於10筆就會進行資料分頁***
+
+###### tags: `React.js` `Javascript` `Fronted-End`
