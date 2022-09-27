@@ -1,5 +1,5 @@
 import StationList from './StationList';
-import './Search.css'
+import './Search.scss'
 
 const SearchField = ({ stationRef, stationList, GetChosenRegionStationData, ClearChosenRegionStationData }) => {
     return(

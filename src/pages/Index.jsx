@@ -4,7 +4,7 @@ import Header from './conponents/Header/Header';
 import SearchField from './conponents/Search/SearchField';
 import ResultField from './conponents/Result/ResultField';
 import UIBlock from './conponents/UI_Block/UIBlock';
-import './index.css'
+import './index.scss'
 
 const Index = () => {
     // 台北市政府開放資料平台 Youbike2.0資料api

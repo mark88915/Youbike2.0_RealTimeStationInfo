@@ -1,4 +1,4 @@
-import "./UIBlock.css"
+import "./UIBlock.scss"
 
 const UIBlock = ({ isDataLoading }) => {
     if (isDataLoading){
