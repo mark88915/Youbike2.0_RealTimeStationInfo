@@ -7,10 +7,12 @@
 2. 實作Call API只有在實習期間的工作以及先前的C#作品中，還沒有在前端作品中實作過。
 3. 繼續練習CSS Flex切版、RWD以及學習基礎CSS動畫(Keyframe animation)。
 4. 實作Pagination、UI Block。
+5. 練習SCSS
 
 ## 使用到的工具
 * React.js以及CSS
 * axios
+* SCSS
 * 台北市政府開放資料平台
 * Visual Studio Code
 * 部屬至Github Pages
