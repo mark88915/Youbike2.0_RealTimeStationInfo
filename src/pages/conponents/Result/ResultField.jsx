@@ -1,5 +1,5 @@
 import ResultItem from "./ResultItem";
-import "./Result.css"
+import "./Result.scss"
 import { v4 } from 'uuid';
 import { useEffect, useState } from "react";
 

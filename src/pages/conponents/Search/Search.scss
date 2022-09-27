@@ -5,8 +5,11 @@
 
     font-size: 20px;
     width: 100%;
+
     padding: 20px;
-    padding-top: 100px;
+    padding: {
+        top: 100px;
+    }
     margin-bottom: 10px;
     background-color: rgb(251, 255, 194);
 
@@ -25,7 +28,9 @@
     font-size: 20px;
     padding: 10px;
     border: 0px;
-    border-radius: 0%;
+    border: {
+        radius: 0%;
+    }
 
     /* 處理Safari的預設style */
     -webkit-appearance: none; 
@@ -58,10 +63,12 @@
     margin-left: 5px;
     font-size: 20px;
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #fff;
-    background-position: center;
+    background: {
+        repeat: no-repeat;
+        size: contain;
+        color: #fff;
+        position: center;
+    }
 
     width: 60px;
     height: 35px;
@@ -69,6 +76,22 @@
     /* 處理Safari的預設style */
     -webkit-appearance: none; 
     border: 2px black solid;
+
+    &:active {
+        background-color: rgb(202, 202, 202);
+        box-shadow: 3px 3px;
+    }
+
+    &:hover {
+        box-shadow: 3px 3px;
+
+        animation: {
+            name: ShakeItem;
+            duration: .5s;
+            iteration-count: infinite;
+            delay: 2s;
+        }
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -83,18 +106,4 @@
 
 #ClearButton {
     background-image: url("./eraser.png");
-}
-
-.FunctionButton:active {
-    background-color: rgb(202, 202, 202);
-    box-shadow: 3px 3px;
-}
-
-.FunctionButton:hover{
-    box-shadow: 3px 3px;
-
-    animation-name: ShakeItem;
-    animation-duration: .5s;
-    animation-iteration-count: infinite;
-    animation-delay: 2s;
 }
