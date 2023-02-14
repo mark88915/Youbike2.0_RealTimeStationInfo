@@ -1,4 +1,5 @@
-import axios from 'axios';
+import { GetAllYoubikeStationData } from '../utils/axios';
+
 import { useState, useEffect, useRef } from 'react';
 import Header from './conponents/Header/Header';
 import SearchField from './conponents/Search/SearchField';
@@ -7,14 +8,11 @@ import UIBlock from './conponents/UI_Block/UIBlock';
 import './index.scss'
 
 const Index = () => {
-    // 台北市政府開放資料平台 Youbike2.0資料api
-    const apiUrl = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json";
-
     // 當前Select-Box選項
-    const stationRef = useRef("大安區");
+    const RegionRef = useRef("大安區");
 
     // 台北各區域List，放入Select-Box作為option的依據
-    const [stationList, setStationList] = useState([]);
+    const [regionList, setregionList] = useState([]);
 
     // 選中區域之站點資訊List，作為下方顯示資料的依據
     const [chosenRegionStationList, setChosenRegionStationList] = useState([]);
@@ -24,44 +22,43 @@ const Index = () => {
 
     // Get Station Name List After First Render
     useEffect(() => {
-        function GetStationNameList() {
-            var request = GetAllYoubikeStationData();
+        SetIsDataLoading(true);
+        let request = GetAllYoubikeStationData();
 
-            request.then(function (response) {
-                var tempList = [];
-                var data = response.data;
+        request
+            .then(function (response) {
+                let regionList = [];
+                let data = response.data;
 
                 data.forEach(function (content) {
-                    var stationName = content["sarea"];
+                    let stationName = content["sarea"];
 
-                    if (!tempList.includes(stationName)) {
-                        tempList.push(stationName);
+                    if (!regionList.includes(stationName)) {
+                        regionList.push(stationName);
                     }
                 })
 
-                setStationList(tempList);
+                setregionList(regionList);
                 SetIsDataLoading(false);
             })
-        }
-
-        GetStationNameList();
+            .catch((error) => {
+                // 需要加點東西
+                console.log(error);
+            })
     }, [])
 
-    // Axios Get Data
-    function GetAllYoubikeStationData() {
-        SetIsDataLoading(true);
-        return axios.get(apiUrl);
-    }
+
 
     // Get Chosen Station Data
     function GetChosenRegionStationData() {
         ClearChosenRegionStationData();
-        var request = GetAllYoubikeStationData();
+        SetIsDataLoading(true);
+        let request = GetAllYoubikeStationData();
 
         request.then(function (response) {
-            var data = response.data;
-            var result = data.filter(content => content["sarea"] === stationRef.current.value);
-            var tempList = result.map(function (content) {
+            let data = response.data;
+            let result = data.filter(content => content["sarea"] === RegionRef.current.value);
+            let stationInfoList = result.map(function (content) {
                 return {
                     road: content["ar"],
                     total: content["tot"],
@@ -71,7 +68,7 @@ const Index = () => {
                 }
             })
 
-            setChosenRegionStationList(tempList);
+            setChosenRegionStationList(stationInfoList);
             SetIsDataLoading(false);
         });
     }
@@ -83,7 +80,7 @@ const Index = () => {
     return (
         <div id="Container">
             <Header />
-            <SearchField stationRef={stationRef} stationList={stationList} GetChosenRegionStationData={GetChosenRegionStationData} ClearChosenRegionStationData={ClearChosenRegionStationData} />
+            <SearchField RegionRef={RegionRef} regionList={regionList} GetChosenRegionStationData={GetChosenRegionStationData} ClearChosenRegionStationData={ClearChosenRegionStationData} />
 
             <ResultField chosenRegionStationList={chosenRegionStationList} />
             <UIBlock isDataLoading={isDataLoading} />

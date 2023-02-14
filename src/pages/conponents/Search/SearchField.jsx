@@ -1,13 +1,13 @@
 import StationList from './StationList';
 import './Search.scss'
 
-const SearchField = ({ stationRef, stationList, GetChosenRegionStationData, ClearChosenRegionStationData }) => {
+const SearchField = ({ RegionRef, regionList, GetChosenRegionStationData, ClearChosenRegionStationData }) => {
     return(
         <div id="SearchField">
-            <StationList stationRef={stationRef} stationList={stationList} />
+            <StationList RegionRef={RegionRef} regionList={regionList} />
 
-            <button id="SearchButton" className="FunctionButton" onClick={GetChosenRegionStationData}></button>
-            <button id="ClearButton" className="FunctionButton" onClick={ClearChosenRegionStationData}></button>
+            <button id="SearchButton" className="FunctionButton" onClick={GetChosenRegionStationData} />
+            <button id="ClearButton" className="FunctionButton" onClick={ClearChosenRegionStationData} />
         </div>
     )
 }
